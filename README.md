@@ -38,7 +38,7 @@ back to Normal mode from any other mode. Considered to be the *browsing* or *rea
 **Insert mode** can be accessed by pressing the `i` key while in Normal mode. While in insert mode, you are able to write and enter text like in a regular text editor. 
 
 ## Visual [v]
-**Visual mode ** can be accessed by pressing the `v` key while in Normal mode. While in Visual mode, you are able to select characters, strings and lines before using a command to modify it.
+**Visual mode** can be accessed by pressing the `v` key while in Normal mode. While in Visual mode, you are able to select characters, strings and lines before using a command to modify it.
 
 # Commands
 ## Saving and Quitting
