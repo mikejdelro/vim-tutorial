@@ -10,17 +10,20 @@
 - [Commands](#commands)
   - [Saving and Quitting](#saving-and-quitting)
   - [Movement](#movement)
-  - [Moving in Lines](#moving-in-lines)
-  - [Go to Lines](#go-to-lines)
-  - [Moving in Blocks](#moving-in-blocks)
+    - [By Characters](#by-characters)
+    - [By Words](#by-words)
+    - [Modifiers](#modifiers)
+    - [Moving in Lines](#moving-in-lines)
+    - [Moving to Lines](#moving-to-lines)
+    - [Moving in Blocks](#moving-in-blocks)
   - [Search](#search)
-  - [New Lines](#new-lines)
+  - [Inserting](#inserting)
+  - [Multiple Insert](#multiple-insert)
   - [Deleting](#deleting)
   - [Replacing](#replacing)
   - [Repeat Command](#repeat-command)
-  - [Multiple Insert](#multiple-insert)
   - [Undo and Redo](#undo-and-redo)
-  - [Undo and Redo](#undo-and-redo-1)
+  - [New Lines](#new-lines)
 - [References](#references)
 
 # What is vim
@@ -51,6 +54,7 @@ Typing in `:q!` in the command palette and hitting `Enter` will quit you out of 
 Typing in `:w` in the command palette and hitting `Enter` save your current work.
 
 ## Movement
+### By Characters
 While in Normal mode, Basic one cursor movements are handled by the `h`, `j`, `k` and `l` keys.
 
 `h` - Left
@@ -61,6 +65,7 @@ While in Normal mode, Basic one cursor movements are handled by the `h`, `j`, `k
 
 `l` - Right
 
+### By Words
 Word specific movements are handled by the `b`, `e` and `w` keys.
 
 `b` - beginning of the word.
@@ -69,6 +74,7 @@ Word specific movements are handled by the `b`, `e` and `w` keys.
 
 `w` - beginning of the next word.
 
+### Modifiers
 Movement can be modified by `numbers`.
 
 `2b` will move to the beginning of the send word.
@@ -79,20 +85,19 @@ Movement can be modified by `numbers`.
 
 `$` will move you to the end of the line.
 
-
-## Moving in Lines
+### Moving in Lines
 `*` will find the *next* occurence of the word your cursor is under.
 
 `#` will find the *previous* occurence of the word your cursor is under.
 
-## Go to Lines
+### Moving to Lines
 `gg` will move you to the beginning of the file.
 
 `G` will move you to the end of the file.
 
 `36G` will move you to line 36.
 
-## Moving in Blocks
+### Moving in Blocks
 When in Normal mode, while hovering over a`(`, `[` or `{` character, you can go to the matching `)`, `]` or `}` with the `%` key.
 
 ## Search
@@ -103,10 +108,19 @@ When in Normal mode, while hovering over a`(`, `[` or `{` character, you can go 
 
 `N` will move to the previous instane of the string you're searching for.
 
-## New Lines
-`o` will create a new line underneath your selected line.
+## Inserting
+`i` will enter you into Insert mode and let you type to the left of the cursor.
 
-`O` will create a new line above your selected line.
+`I` will enter you into Insert mode and let you type at the first non-blank character.
+
+`s` will delete the character under the cursor and enter Insert mode.
+
+`S` will delete the line under the cursor and enter Insert mode.
+
+## Multiple Insert
+While in Normal mode, you can insert text multiple times by modifying the `i` function with a `number`.
+
+`6i-` then hitting the `Esc` key will enter `------`.
 
 ## Deleting
 `x` will delete characters to the RIGHT of the cursor.
@@ -131,18 +145,16 @@ You can modify the commands above with `numbers` after the `d` command.
 ## Repeat Command
 `.` will repeat the previous command used.
 
-## Multiple Insert
-While in Normal mode, you can insert text multiple times by modifying the `i` function with a `number`.
-
-`6i-` then hitting the `Esc` key will enter `------`.
-
-## Undo and Redo
-`u` will undo your previous action
-
 ## Undo and Redo
 `u` will undo your previous action.
 
 `CTRL+R` will redo you previous action.
+
+## New Lines
+`o` will create a new line underneath your selected line.
+
+`O` will create a new line above your selected line.
+
 
 # References
 - Shawn Biddle's vim classes
