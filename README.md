@@ -18,8 +18,9 @@
     - [Moving in Blocks](#moving-in-blocks)
   - [Search](#search)
   - [Inserting](#inserting)
-  - [Multiple Insert](#multiple-insert)
   - [Deleting](#deleting)
+  - [Deleting then Inserting](#deleting-then-inserting)
+  - [Multiple Insert](#multiple-insert)
   - [Replacing](#replacing)
   - [Repeat Command](#repeat-command)
   - [Undo and Redo](#undo-and-redo)
@@ -113,14 +114,15 @@ When in Normal mode, while hovering over a`(`, `[` or `{` character, you can go 
 
 `I` will enter you into Insert mode and let you type at the first non-blank character.
 
-`s` will delete the character under the cursor and enter Insert mode.
+`a` will enter you into Insert mode and let you type to the right of the cursor
 
-`S` will delete the line under the cursor and enter Insert mode.
+`A` will enter you into Insert mode and let you type at the end of the line.
 
-## Multiple Insert
-While in Normal mode, you can insert text multiple times by modifying the `i` function with a `number`.
+`o`
 
-`6i-` then hitting the `Esc` key will enter `------`.
+`O`
+
+
 
 ## Deleting
 `x` will delete characters to the RIGHT of the cursor.
@@ -138,6 +140,18 @@ While in Normal mode, you can insert text multiple times by modifying the `i` fu
 You can modify the commands above with `numbers` after the `d` command.
 
 `d4w` will delete 4 words starting from the cursor.
+
+## Deleting then Inserting
+`s` will delete 
+
+`S`
+
+`C`
+
+## Multiple Insert
+While in Normal mode, you can insert text multiple times by modifying the `i` function with a `number`.
+
+`6i-` then hitting the `Esc` key will enter `------`.
 
 ## Replacing
 `r` will allow you to replace/insert onto the character you are highlighting.
